@@ -15,4 +15,12 @@
         <property name="bname" value="易筋经"></property>
         <property name="bauthor" value="达摩祖师"></property>
     </bean>
+
+    <!--有参构造注入属性-->
+    <bean id="orders" class="com.atguigu.spring5.Orders">
+        <constructor-arg name="oname" value="电脑"></constructor-arg>
+        <constructor-arg name="address" value="China"></constructor-arg>
+        <!-- index：第几个参数-->
+        <!--<constructor-arg index="0" value="abc"></constructor-arg>-->
+    </bean>
 </beans>

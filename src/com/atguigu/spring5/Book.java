@@ -4,6 +4,7 @@ package com.atguigu.spring5;
  * @author 楠檀,
  * @date 2023/2/15,
  * @time 0:56,
+ * 使用set注入
  */
 public class Book {
     //创建属性
