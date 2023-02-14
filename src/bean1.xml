@@ -8,14 +8,27 @@
     <bean id="user" class="com.atguigu.spring5.User"></bean>
 
     <!--set方法注入属性-->
-<!--    <bean id="book" class="com.atguigu.spring5.Book">-->
-<!--        &lt;!&ndash;使用property完成属性注入-->
-<!--            name:类里面属性名称-->
-<!--            value:向属性注入的值-->
-<!--        &ndash;&gt;-->
-<!--        <property name="bname" value="易筋经"></property>-->
-<!--        <property name="bauthor" value="达摩祖师"></property>-->
-<!--    </bean>-->
+    <bean id="book" class="com.atguigu.spring5.Book">
+        <!--使用property完成属性注入
+            name:类里面属性名称
+            value:向属性注入的值
+        -->
+        <property name="bname" value="易筋经"></property>
+        <property name="bauthor" value="达摩祖师"></property>
+
+        <!--注入空值-->
+<!--        <property name="address">-->
+<!--            <null></null>-->
+<!--        </property>-->
+
+        <!--注入特殊符号
+            1.把<>进行转义&lt &gt
+            2.把带特殊符号内容写到CDATA
+        -->
+        <property name="address">
+            <value><![CDATA[<<南京>>]]></value>
+        </property>
+    </bean>
 
     <!--有参构造注入属性-->
     <bean id="orders" class="com.atguigu.spring5.Orders">
@@ -26,5 +39,5 @@
     </bean>
 
     <!--p名称空间注入-->
-    <bean id="book" class="com.atguigu.spring5.Book" p:bname="九阳神功" p:bauthor="无名氏"></bean>
+<!--    <bean id="book" class="com.atguigu.spring5.Book" p:bname="九阳神功" p:bauthor="无名氏"></bean>-->
 </beans>

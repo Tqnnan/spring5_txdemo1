@@ -10,6 +10,7 @@ public class Book {
     //创建属性
     private String bname;
     private String bauthor;
+    private String address;
 
     //创建属性对应的方法
     public void setBname(String bname) {
@@ -20,7 +21,11 @@ public class Book {
         this.bauthor = bauthor;
     }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public void testDemo(){
-        System.out.println(bname+"::"+bauthor);
+        System.out.println(bname+"::"+bauthor+"::"+address);
     }
 }
