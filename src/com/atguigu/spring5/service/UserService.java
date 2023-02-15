@@ -1,22 +1,20 @@
 package com.atguigu.spring5.service;
 
-import com.atguigu.spring5.dao.UserDao;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @author 楠檀,
  * @date 2023/2/15,
- * @time 2:31,
+ * @time 23:51,
  */
+//在注解里面value属性值可以省略不写，默认值是类名称，首字母小写
+//UserService -- userService
+//@Component(value = "userService")//相当于<bean id="userService" class="..."/>
+@Service
 public class UserService {
-    //创建UserDao类型属性，生成set方法
-    private UserDao userDao;
-
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
-    }
 
     public void add(){
-        System.out.println("service add.......");
-        userDao.update();
+        System.out.println("Service add.........");
     }
 }
