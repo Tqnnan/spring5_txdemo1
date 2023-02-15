@@ -17,6 +17,9 @@ public class JDKProxy {
         Class[] interfaces = {UserDao.class};
         //创建接口实现类代理对象
         UserDaoImpl userDao = new UserDaoImpl();
+        //第一参数，类加载器
+        //第二参数，增强方法所在的类，这个类实现的接口，支持多个接口
+        //第三参数，实现这个接口 InvocationHandler，创建代理对象，写增强的部分
         UserDao dao = (UserDao) Proxy.newProxyInstance(JDKProxy.class.getClassLoader(),interfaces,new UserDaoProxy(userDao));
         int result = dao.add(1,2);
         System.out.println("result:"+result);
