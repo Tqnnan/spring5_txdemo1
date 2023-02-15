@@ -19,7 +19,7 @@
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
     </bean>
 
-    <!--JdbvTemplate对象-->
+    <!--JdbcTemplate对象-->
     <bean id="" class="org.springframework.jdbc.core.JdbcTemplate">
         <!--注入dataSource-->
         <property name="dataSource" ref="dataSource"></property>

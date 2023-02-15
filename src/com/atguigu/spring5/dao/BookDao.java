@@ -2,6 +2,8 @@ package com.atguigu.spring5.dao;
 
 import com.atguigu.spring5.entity.Book;
 
+import java.util.List;
+
 /**
  * @author 楠檀,
  * @date 2023/2/16,
@@ -10,4 +12,14 @@ import com.atguigu.spring5.entity.Book;
 public interface BookDao {
     //添加方法
     void add(Book book);
+
+    void updateBook(Book book);
+
+    void delete(String id);
+
+    int selectCount();
+
+    Book selectBook(String id);
+
+    List<Book> selectAll();
 }

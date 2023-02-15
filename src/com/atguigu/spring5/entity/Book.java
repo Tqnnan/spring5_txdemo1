@@ -35,5 +35,12 @@ public class Book {
         this.ustatus = ustatus;
     }
 
-
+    @Override
+    public String toString() {
+        return "Book{" +
+                "userId='" + userId + '\'' +
+                ", username='" + username + '\'' +
+                ", ustatus='" + ustatus + '\'' +
+                '}';
+    }
 }

@@ -5,6 +5,8 @@ import com.atguigu.spring5.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author 楠檀,
  * @date 2023/2/16,
@@ -21,5 +23,31 @@ public class BookService {
     //添加的方法
     public void addBook(Book book){
         bookDao.add(book);
+    }
+
+    //修改的方法
+    public void updateBook(Book book){
+        bookDao.updateBook(book);
+    }
+
+    //删除
+    public void delete(String id){
+        bookDao.delete(id);
+    }
+
+    //查询表记录数
+    public int  selectCount(){
+        return bookDao.selectCount();
+    }
+
+    //查询返回对象
+    public Book selectBook(String id){
+        return bookDao.selectBook(id);
+    }
+
+    //查询返回集合
+    public List<Book> selectAll(){
+        return bookDao.selectAll();
+
     }
 }
