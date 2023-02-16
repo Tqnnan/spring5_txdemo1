@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 
 @Service
-//@Transactional
+@Transactional
 //@Transactional这个注解
 //添加到类上：指给这个类所以方法都添加事务
 //添加到方法上，指为这个方法添加事务
