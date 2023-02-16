@@ -48,6 +48,20 @@ public class BookService {
     //查询返回集合
     public List<Book> selectAll(){
         return bookDao.selectAll();
+    }
 
+    //批量添加
+    public void batchAdd(List<Object[]> batchArgs){
+        bookDao.batchAdd(batchArgs);
+    }
+
+    //批量修改
+    public void batchUpdate(List<Object[]> batchArgs){
+        bookDao.batchUpdate(batchArgs);
+    }
+
+    //批量删除
+    public void batchDelet(List<Object[]> batchArgs){
+        bookDao.batchDelet(batchArgs);
     }
 }
